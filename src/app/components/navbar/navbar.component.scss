@@ -1,0 +1,9 @@
+@import '../../../styles.scss';
+
+.navbar {
+    background-color: $purple-light;
+
+    a {
+        color: $white;
+    }
+}
