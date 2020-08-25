@@ -1,0 +1,35 @@
+@import '../../../styles.scss';
+
+.badge {
+    background-color: $purple-light;
+}
+
+.artist-img-container {
+    @media (min-width: 768px) {
+        max-width: 200px;
+    }
+}
+
+.track-img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.media {
+    background-color: $purple-light;
+    border-radius: 10px;
+
+    h5, p {
+        color: $white;
+    }
+}
+
+.media-body {
+    color: black;
+}
+
+.list-group {
+    @media (min-width: 768px) {
+        width: 500px;
+    }
+}

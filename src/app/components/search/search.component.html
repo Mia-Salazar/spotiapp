@@ -5,7 +5,7 @@
 			<input #term placeholder="Search your artist" (keyup)="search(term.value)" type="text" class="form-control" />
 
 			<ul class="list-group mt-5">
-				<li class="list-group-item text-dark" *ngFor="let el of searchList"><a [href]="el.external_urls">{{el.name}}</a></li>
+				<li class="list-group-item text-dark" *ngFor="let el of searchList" (click)="goToArtist(el)">{{el.name}}</li>
 			</ul>
 
 		</div>

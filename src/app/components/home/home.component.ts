@@ -11,6 +11,8 @@ export class HomeComponent implements OnInit {
   arrayCountries:any[] = []
   releases:any[] = []
   loading = true
+  error = false
+  errorMessage
 
   constructor(private http:HttpClient, private spotiapp:SpotiappService) {
     // this.http.get('https://restcountries.eu/rest/v2/lang/es')
@@ -24,6 +26,9 @@ export class HomeComponent implements OnInit {
       .subscribe((data:any) =>{
         this.releases = data
         this.loading = false
+      }, (error) => {
+        this.error = true
+        this.errorMessage = error.error.error.message
       })
    }
 

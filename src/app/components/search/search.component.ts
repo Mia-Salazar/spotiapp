@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
 import { SpotiappService } from '../../services/spotiapp.service'
 
 @Component({
@@ -9,7 +10,7 @@ import { SpotiappService } from '../../services/spotiapp.service'
 export class SearchComponent implements OnInit {
 
   searchList:any[] = []
-  constructor(private spotiapp:SpotiappService) { }
+  constructor(private spotiapp:SpotiappService, private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -21,5 +22,10 @@ export class SearchComponent implements OnInit {
       this.searchList = data.artists.items
       console.log(this.searchList)
     })
+  }
+
+  goToArtist(el:any){
+    let artistId = el.id
+    this.router.navigate(['/artist', artistId])
   }
 }

@@ -12,17 +12,34 @@ export class SpotiappService {
 
   newReleases(){
     const headers = new HttpHeaders({
-      'Authorization' : 'Bearer BQBdYhZuS05GrIhi04x4LfGTnWisIEoD-j7ih6HBV_Qy9rBilAwAx64JktccLN4mrMazmNTTP-Wd07s2Reg'
+      'Authorization' : 'Bearer BQAVY2u5HhqpI9SD_XDM1mHmk9edUxX2mPKhOCGcRxLudLPGEf5rRlCYOomU-uZLKFtV2les2L1VgerOWJI'
     })
     return this.http.get('https://api.spotify.com/v1/browse/new-releases', { headers })
     .pipe(map(data => data['albums'].items
     ))
   }
 
-  getArtist(term){
+  getArtist(term:string){
     const headers = new HttpHeaders({
-      'Authorization' : 'Bearer BQBdYhZuS05GrIhi04x4LfGTnWisIEoD-j7ih6HBV_Qy9rBilAwAx64JktccLN4mrMazmNTTP-Wd07s2Reg'
+      'Authorization' : 'Bearer BQAVY2u5HhqpI9SD_XDM1mHmk9edUxX2mPKhOCGcRxLudLPGEf5rRlCYOomU-uZLKFtV2les2L1VgerOWJI'
     })
     return this.http.get(`https://api.spotify.com/v1/search?q=${term}&type=artist&offset=15`, { headers });
+  }
+
+  getArtistDetails(id:string) {
+    const headers = new HttpHeaders({
+      'Authorization' : 'Bearer BQAVY2u5HhqpI9SD_XDM1mHmk9edUxX2mPKhOCGcRxLudLPGEf5rRlCYOomU-uZLKFtV2les2L1VgerOWJI'
+    })
+    return this.http.get(`https://api.spotify.com/v1/artists/${id}`, { headers });
+  }
+
+  getTracks(id:string) {
+    const headers = new HttpHeaders({
+      'Authorization' : 'Bearer BQAVY2u5HhqpI9SD_XDM1mHmk9edUxX2mPKhOCGcRxLudLPGEf5rRlCYOomU-uZLKFtV2les2L1VgerOWJI'
+    })
+    return this.http.get(`https://api.spotify.com/v1/artists/${id}/top-tracks?country=ES`, { headers })
+    .pipe(map(data => data['tracks']
+    ))
+
   }
 }

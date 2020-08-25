@@ -1,1 +1,29 @@
-<p>artist works!</p>
+<section class="container mt-5 d-flex flex-column align-items-center">
+    <app-loading *ngIf="loading"></app-loading>
+    <div *ngIf="!loading" class="d-flex flex-column align-items-center pb-5">
+        <h1 class="mt-5 mb-4">{{artist.name}}</h1>
+        <div class="d-md-flex"><span class="badge badge-secondary mr-2" *ngFor="let el of artist.genres">{{el}}</span></div>
+        <figure class="m-0 mt-5" *ngIf="artist.images.length > 0">
+            <img alt="" [src]="artist.images[0].url || defaultImg" class="artist-img" />
+        </figure>
+        <a [href]="artist.external_urls.spotify" class="btn btn-secondary mt-5">Ir a su perfil</a>
+        <div class="media mt-5 mb-4">
+            <div class="media-body d-flex flex-column align-items-center h-100 p-4">
+              <h5 class="m-0">Popularity: {{artist.popularity}} </h5>
+              <p class="mb-0">Followers: {{artist.followers.total}}</p>
+            </div>
+        </div> 
+        <h2 class="text-white my-4">Top tracks</h2>
+        <div class="list-group my-4 flex-row" *ngFor="let track of tracks">
+            <div class="d-flex flex-column w-100 justify-content-between">
+                <h5 class="mb-1">{{track.name}}</h5>
+                <p class="mb-auto">{{track.album.name}}.</p>
+                <audio [src]="track.preview_url" controls></audio>
+            </div>
+            <figure class="m-0 ml-4 artist-img-container">
+                <img alt="" [src]="track.album.images[0].url || defaultImg" class="track-img" />
+            </figure>
+        </div>
+
+    </div>
+</section>
