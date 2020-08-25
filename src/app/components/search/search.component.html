@@ -1,1 +1,13 @@
-<p>search works!</p>
+<section class="container">
+	<div class="row">
+		<div class="col-12 col-md-6 mt-5">
+			<h1 class="mt-5 mb-4">Search your artists</h1>
+			<input #term placeholder="Search your artist" (keyup)="search(term.value)" type="text" class="form-control" />
+
+			<ul class="list-group mt-5">
+				<li class="list-group-item text-dark" *ngFor="let el of searchList"><a [href]="el.external_urls">{{el.name}}</a></li>
+			</ul>
+
+		</div>
+	</div>
+</section>
