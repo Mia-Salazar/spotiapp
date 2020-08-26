@@ -9,6 +9,8 @@ import { SearchComponent } from './components/search/search.component';
 import { ArtistComponent } from './components/artist/artist.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
+import { PrivateComponent } from './components/private/private.component';
+import { CallbackComponent } from './components/callback/callback.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     SearchComponent,
     ArtistComponent,
     NavbarComponent,
-    LoadingComponent
+    LoadingComponent,
+    PrivateComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule,

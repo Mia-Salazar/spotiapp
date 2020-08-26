@@ -11,6 +11,9 @@
           <li class="nav-item" routerLinkActive="active">
             <a class="nav-link" routerLink="search">Search</a>
           </li>
+          <li class="nav-item" routerLinkActive="active" *ngIf="auth.loggedIn">
+            <a class="nav-link" routerLink="private">Private</a>
+          </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Autora
@@ -22,6 +25,8 @@
             <a class="dropdown-item" href="https://github.com/Mia-Salazar/" target="_blank">Github</a>
           </div>
         </li>
+        <button (click)="auth.login()" class="login-button" *ngIf="!auth.loggedIn">Log In</button>
+        <button (click)="auth.logout()" class="login-button"  *ngIf="auth.loggedIn">Log Out</button>
       </ul>
     </div>
   </nav>

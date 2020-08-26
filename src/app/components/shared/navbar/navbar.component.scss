@@ -10,4 +10,13 @@
     .dropdown-item {
         color: $black;
     }
+
+    .login-button{
+        border: none;
+        background: $purple-dark;
+        color: $white;
+        margin-left: auto;
+        padding-right: 16px;
+        padding-left: 16px;
+    }
 }
