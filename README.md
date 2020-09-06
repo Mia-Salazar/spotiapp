@@ -1,6 +1,6 @@
 # Spotiapp
 
-> A project made in Angular using Spotify APIMy first project made with Angular, Javascript, SASS, Bootstrap4, CSS3 and HTML5
+> A project made with Angular, Javascript, SASS, Bootstrap4, CSS3 and HTML5 using Spotify API. 
 
 ``` bash
 # install dependencies
@@ -21,7 +21,6 @@ $ ng test
 
 * [Angular](https://github.com/angular//) - The web framework used
 * [Bootrap](https://getbootstrap.com/) - CSS Library
-
 * [SASS](https://sass-lang.com/) - CSS preprocessor
 * [Spotify](https://developer.spotify.com/documentation/web-api/) - Spotify API
 
