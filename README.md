@@ -1,27 +1,39 @@
 # Spotiapp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.4.
+> A project made in Angular using Spotify APIMy first project made with Angular, Javascript, SASS, Bootstrap4, CSS3 and HTML5
 
-## Development server
+``` bash
+# install dependencies
+$ npm install
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# serve with hot reload at localhost:4200
+$ ng serve
 
-## Code scaffolding
+# build
+$ ng build
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# test
+$ ng test
 
-## Build
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Built With
 
-## Running unit tests
+* [Angular](https://github.com/angular//) - The web framework used
+* [Bootrap](https://getbootstrap.com/) - CSS Library
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* [SASS](https://sass-lang.com/) - CSS preprocessor
+* [Spotify](https://developer.spotify.com/documentation/web-api/) - Spotify API
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+
+### Authors
+
+* **Mia Salazar** - *Initial work* - [Mia-Salazar](https://github.com/Mia-Salazar)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
